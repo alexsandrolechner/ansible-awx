@@ -1,0 +1,21 @@
+--- 
+- name: Create Resource Group in Azure 
+  hosts: localhost 
+  gather_facts: false 
+
+  tasks:  
+    # Cria o resource group no Azure
+    - name: create resource group "{{ rg_name }}" 
+      azure.azcollection.azure_rm_resourcegroup: 
+        name: "{{ rg_name }}" 
+        location: "{{ rg_location }}" 
+        state: present
+        tags:
+          Company: "Fidelidade Companhia de Seguros, SA"
+          Environment: "LAB"
+          BusinessCriticity: "Silver"
+          AppName: "POC Ansible"
+          ITOrgOwner: "FIT/IO/SMDR"
+          ITOwner: "Ricardo Rodrigues"
+          OpsOrgOwner: "FIT/IO/SMDR"
+          OpsOwner: "Paulo Bandeira"

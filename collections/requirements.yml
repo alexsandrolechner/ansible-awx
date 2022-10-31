@@ -1,0 +1,14 @@
+---
+collections:
+- name: https://github.com/cyberark/ansible-security-automation-collection.git
+  type: git
+- name: https://github.com/ansible-collections/ansible.windows.git
+  type: git
+- name: https://github.com/ansible-collections/community.windows.git
+  type: git
+- name: https://github.com/ansible-collections/azure.git
+  type: git
+- name: https://github.com/ansible-collections/community.vmware.git
+  type: git
+
+  
